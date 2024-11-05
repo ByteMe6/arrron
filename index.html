@@ -10,18 +10,19 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
-      <div class="logo">
+      <div class="logo" data-aos="fade-right">
         <img src="logo.png" alt="logo" />
       </div>
-      <button class="burger-menu" aria-label="Toggle navigation">
+      <button class="burger-menu" aria-label="Toggle navigation" data-aos="fade-left">
         <span class="burger-icon"></span>
       </button>
       <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-list" data-aos="fade-down" data-aos-delay="100">
           <li class="nav-item">
             <a href="#" class="nav-link chosen-nav-link">Наши услуги</a>
           </li>
@@ -29,7 +30,7 @@
           <li class="nav-item"><a href="#" class="nav-link">Отзывы</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Контакты</a></li>
         </ul>
-        <ul class="contect-list">
+        <ul class="contect-list" data-aos="fade-up" data-aos-delay="200">
           <li class="contect-item"><a href="#">069 82 77 38</a></li>
           <li class="contect-item delitel">/</li>
           <li class="contect-item"><a href="#">079 92 77 38</a></li>
@@ -43,7 +44,7 @@
     <br />
     <main class="main">
       <section class="hero">
-        <div class="hero-text-container">
+        <div class="hero-text-container" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="heroHeading">Проблемы с Вашим устройством?</h1>
           <p class="hero-text">
             Решаем любые проблемы! Большой склад и опытные мастера
@@ -52,7 +53,7 @@
             Бесплатная консультация
           </button>
         </div>
-        <div class="hero-img-conteiner" style="position: relative;">
+        <div class="hero-img-conteiner" style="position: relative;" data-aos="fade-left" data-aos-duration="1000">
           <img src="assets/img/heroImg.png" alt="hero-img" />
           <div class="card" style="
             position: absolute;
@@ -64,7 +65,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 220px;
             font-family: Arial, sans-serif;
-          ">
+          " data-aos="zoom-in" data-aos-delay="500">
             <div class="discount" style="display: flex; align-items: center; font-size: 2em; color: #ff5722;">
               <span class="discount-percentage">50%</span>
               <span class="discount-icon" style="margin-left: 5px;">🔥</span>
@@ -94,12 +95,18 @@
         </div>
       </section>
     </main>
+
+
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      AOS.init();
+      
       const burgerMenu = document.querySelector('.burger-menu');
       const nav = document.querySelector('.nav');
       const body = document.body;
