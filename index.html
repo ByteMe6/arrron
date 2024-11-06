@@ -336,6 +336,37 @@
           </li>
         </ul>
       </section>
+
+      <section class="completed" data-aos="fade-up">
+        <div class="completed__container">
+          <ul class="completed-slider">
+            <li class="completed-slider__item" data-aos="zoom-in" data-aos-delay="100">
+              <img src="./assets/img/completed/1.png" alt="completed-img">
+            </li>
+            <li class="completed-slider__item" data-aos="zoom-in" data-aos-delay="200">
+              <img src="./assets/img/completed/2.png" alt="completed-img" />
+            </li>
+            <li class="completed-slider__item" data-aos="zoom-in" data-aos-delay="300">
+              <img src="./assets/img/completed/3.png" alt="completed-img" />
+            </li>
+          </ul>
+
+          <div class="completed-slider__buttons">
+            <button type="button" class="completed-slider__btn prev" data-aos="fade-right" data-aos-delay="400">
+              <span>←</span>
+            </button>
+            <button type="button" class="completed-slider__btn next" data-aos="fade-left" data-aos-delay="400">
+              <span>→</span>
+            </button>
+          </div>
+
+          <div class="completed-slider__dots" data-aos="fade-up" data-aos-delay="500">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script
@@ -345,7 +376,11 @@
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
 
       const burgerMenu = document.querySelector(".burger-menu");
       const nav = document.querySelector(".nav");
@@ -357,5 +392,6 @@
         this.classList.toggle("open");
       });
     </script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

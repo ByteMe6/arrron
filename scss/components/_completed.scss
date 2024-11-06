@@ -1,0 +1,182 @@
+.completed {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+  background: $background-color-third;
+
+  perspective: 1000px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.completed-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  
+  &__item {
+    flex: 0 0 auto;
+    width: 33.333%;
+    padding: 0 15px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.85);
+    position: relative;
+    filter: grayscale(0.5);
+    opacity: 1;
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: all $transition-default;
+    }
+    
+    &.active {
+      transform: scale(1);
+      filter: grayscale(0);
+      z-index: 2;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+    
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba($primary-color, 0.3);
+      transition: all $transition-default;
+      cursor: pointer;
+      
+      &.active {
+        width: 24px;
+        border-radius: 4px;
+        background: $primary-color;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba($primary-color, 0.1);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transition: all $transition-default;
+    backdrop-filter: blur(4px);
+    
+    &:hover {
+      background: rgba($primary-color, 0.9);
+      transform: scale(1.1);
+      
+      span {
+        color: $white;
+      }
+    }
+
+    span {
+      font-size: 24px;
+      color: $primary-color;
+      transition: all $transition-default;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $mobile) {
+  .completed-slider {
+    &__item {
+      width: 100%;
+      padding: 0 10px;
+      opacity: 0;
+      transform: scale(0.7);
+      position: absolute;
+      left: 0;
+      transition: all $transition-default;
+      pointer-events: none;
+      
+      &.active {
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+        pointer-events: auto;
+      }
+    }
+
+    &__dots {
+      bottom: -40px;
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+        
+        &.active {
+          width: 30px;
+        }
+      }
+    }
+
+    &__buttons {
+      padding: 0 15px;
+    }
+
+    &__btn {
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+    //   background: rgba($primary-color, 0.9);
+      
+      span {
+        font-size: 28px;
+        color: $white;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+

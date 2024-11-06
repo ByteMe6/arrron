@@ -1,0 +1,31 @@
+.reviews {
+  background-color: $background-color-third;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.review-slider {
+  @include flex-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 5rem 20px;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+
+  li img {
+    border-radius: 30px;
+    width: 17rem;
+    height: 18rem;
+    object-fit: cover;
+  }
+}
+
+.reviewHeading {
+  text-align: center;
+  color: $text-color;
+  font-size: 42px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 15px;
+  word-wrap: break-word;
+} 

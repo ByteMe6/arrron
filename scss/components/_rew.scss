@@ -228,3 +228,93 @@
         }
     }
 }
+
+.reviews {
+    background-color: $background-color-secondary;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.reviewHeading {
+    text-align: center;
+    color: $text-color;
+    font-size: 42px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 15px;
+    word-wrap: break-word;
+    margin-bottom: 50px;
+}
+
+.review-slider {
+    @include flex-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 2rem 20px;
+    margin-top: 30px;
+    text-align: center;
+    align-items: center;
+
+    li {
+        flex: 0 0 auto;
+        border-radius: 30px;
+        transition: all $transition-default;
+        
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        img {
+            border-radius: 30px;
+            width: 17rem;
+            height: 18rem;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba($primary-color, 0.1);
+        }
+    }
+}
+
+/* Медиа-запросы */
+@media (max-width: 720px) {
+    .reviews {
+        padding: 35px 0;
+    }
+
+    .reviewHeading {
+        font-size: 22px;
+        padding: 0 6px;
+        margin-bottom: 20px;
+    }
+
+    .review-slider {
+        padding: 1rem 6px;
+        gap: 10px;
+        justify-content: center;
+
+        li {
+            width: 100%;
+            max-width: 300px;
+
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .reviews {
+        padding: 25px 0;
+    }
+
+    .reviewHeading {
+        font-size: 20px;
+    }
+
+    .review-slider {
+        li {
+            max-width: 260px;
+        }
+    }
+}
