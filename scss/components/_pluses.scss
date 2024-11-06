@@ -1,0 +1,26 @@
+.pluses ul {
+  margin-top: 100px;
+  @include flex-between;
+}
+
+.pluses-item {
+  width: 30%;
+  gap: 10px;
+  p,
+  h3 {
+    font-family: $font-primary;
+    color: $text-color;
+  }
+}
+@include mobile {
+  .pluses ul {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .pluses-item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@import "../utils/vars";
+
+.deviceWeRepair {
+    padding: 100px 0;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0;
+        list-style: none;
+        justify-content: center;
+    }
+
+    &-item {
+        &:first-child {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        &.iphoneCard,
+        &.androidCard,
+        &.watchCard,
+        &.laptopCard,
+        &.imacCard,
+        &.otherCard {
+            flex: 0 0 calc(30% - 20px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+            }
+
+            // iPhone - квадратные блоки
+            &.iphoneCard {
+                &::before {
+                    width: 40%;
+                    height: 40%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 30%;
+                    height: 30%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            // Android - диагональные блоки
+            &.androidCard {
+                &::before {
+                    width: 50%;
+                    height: 50%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                    clip-path: polygon(0 0, 100% 0, 0 100%);
+                }
+
+                &::after {
+                    width: 40%;
+                    height: 40%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+                }
+            }
+
+            // Watch - прямоугольные блоки
+            &.watchCard {
+                &::before {
+                    width: 35%;
+                    height: 100%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 25%;
+                    height: 25%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            // Laptop - L-образные блоки
+            &.laptopCard {
+                &::before {
+                    width: 40%;
+                    height: 40%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 35%;
+                    height: 35%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            // iMac - прямоугольные блоки с отступами
+            &.imacCard {
+                &::before {
+                    width: 45%;
+                    height: 60%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 35%;
+                    height: 35%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            // Other - асимметричные блоки
+            &.otherCard {
+                &::before {
+                    width: 40%;
+                    height: 35%;
+                    background: rgba($primary-color, 0.2);
+                    top: 0;
+                    left: 0;
+                }
+
+                &::after {
+                    width: 30%;
+                    height: 40%;
+                    background: rgba($secondary-color, 0.2);
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+
+            img {
+                width: 160px;
+                height: 160px;
+                margin-bottom: 30px;
+                object-fit: contain;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+
+    &-heading {
+        font-size: 56px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    &-text {
+        font-size: 32px;
+        margin: 0;
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+    }
+}

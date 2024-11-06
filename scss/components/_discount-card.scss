@@ -58,18 +58,20 @@
       display: flex !important;
       align-items: center !important;
       justify-content: flex-start !important;
+      gap: 2px !important;
       
-      &-icon {
-        margin-left: 5px !important;
+      &-percentage {
         display: inline-block !important;
-        position: relative !important;
-        top: 0 !important;
       }
       
-      &-text {
-        font-size: 0.8em;
-        margin: 5px 0;
-        line-height: 1.3;
+      &-icon {
+        display: inline-block !important;
+        font-size: 0.8em !important;
+        line-height: 1 !important;
+        position: static !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
       }
     }
     

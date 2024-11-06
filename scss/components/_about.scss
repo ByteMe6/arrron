@@ -1,0 +1,133 @@
+.about {
+  padding: 100px 0;
+  background: $background-color-secondary;
+
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &-content {
+    flex: 0 0 40%;
+
+    &__left {
+      max-width: 400px;
+    }
+  }
+
+  &-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &-description {
+    font-size: 18px;
+    color: $text-color;
+    margin-bottom: 30px;
+  }
+
+  &-btn {
+    color: $white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    border-radius: 15px;
+    background: $primary-color;
+    padding: 18px 30px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-color, 0.2);
+    }
+  }
+
+  &-features {
+    flex: 0 0 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      &-content {
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+          color: $text-color;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 16px;
+          color: rgba($text-color, 0.8);
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 60px 0;
+
+    .container {
+      flex-direction: column;
+    }
+
+    &-content {
+      text-align: center;
+
+      &__left {
+        max-width: 100%;
+      }
+    }
+
+    &-title {
+      font-size: 32px;
+    }
+
+    &-btn {
+      display: block;
+      margin: 0 auto;
+      max-width: 200px;
+    }
+
+    &-features {
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      &__item {
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &-content {
+          h3 {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
