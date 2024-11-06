@@ -1,0 +1,23 @@
+.reviews ul li {
+  border-radius: 30px;
+}
+.review-slider {
+  @include flex-between;
+  gap: 20px;
+  li img {
+    border-radius: 30px;
+    width: 17rem;
+    height: 18rem;
+  }
+  flex-wrap: wrap;
+  padding: 5rem 20px;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+}
+.reviewHeading {
+  text-align: center;
+  color: $text-color;
+  font-size: 42px;
+  font-family: $font-primary;
+}

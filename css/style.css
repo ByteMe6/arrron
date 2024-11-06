@@ -898,3 +898,31 @@ hr {
     font-size: 14px;
   }
 }
+
+.reviews ul li {
+  border-radius: 30px;
+}
+
+.review-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 5rem 20px;
+  margin-top: 50px;
+  text-align: center;
+  align-items: center;
+}
+.review-slider li img {
+  border-radius: 30px;
+  width: 17rem;
+  height: 18rem;
+}
+
+.reviewHeading {
+  text-align: center;
+  color: rgb(19, 23, 29);
+  font-size: 42px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
