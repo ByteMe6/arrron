@@ -1,2 +1,13 @@
+// Utils
+@import "./utils/vars";
+@import "./utils/mixins";
+
+// Base
+@import "./base/reset";
+@import "./base/typography";
+
+// Components
 @import "./components/header";
-@import "./components/hero1";
+@import "./components/nav";
+@import "./components/hero";
+@import "./components/discount-card";
