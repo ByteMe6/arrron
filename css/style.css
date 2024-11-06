@@ -926,3 +926,74 @@ hr {
   font-size: 42px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.heroHeading {
+  color: rgb(19, 23, 29);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 100px;
+  word-wrap: break-word;
+  padding: 0 15px;
+}
+
+.reviewHeading {
+  text-align: center;
+  color: rgb(19, 23, 29);
+  font-size: 42px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 15px;
+  word-wrap: break-word;
+}
+
+.deviceWeRepair-heading {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 0 15px;
+  word-wrap: break-word;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: rgb(19, 23, 29);
+  margin-bottom: 20px;
+  padding: 0 15px;
+  word-wrap: break-word;
+}
+
+.about-features__item-content {
+  padding: 0 15px;
+}
+
+@media (max-width: 720px) {
+  .heroHeading {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+  .deviceWeRepair-heading {
+    font-size: 36px;
+  }
+  .about-title {
+    font-size: 28px;
+  }
+  .reviewHeading {
+    font-size: 32px;
+  }
+  .hero-text {
+    padding: 0 15px;
+    word-wrap: break-word;
+  }
+  .about-description {
+    padding: 0 15px;
+    word-wrap: break-word;
+  }
+  .about-features__item-content h3 {
+    word-wrap: break-word;
+  }
+  .about-features__item-content p {
+    word-wrap: break-word;
+  }
+}
