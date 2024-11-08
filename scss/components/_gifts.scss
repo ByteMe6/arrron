@@ -1,0 +1,33 @@
+.gifts {
+    background-color: $background-last;
+    padding: 1rem;
+}
+
+.gifts-list {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.giftCard {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: $font-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    width: 20rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
