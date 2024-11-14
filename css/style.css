@@ -1559,13 +1559,18 @@ hr {
 .workGarant {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 4rem;
+  padding: 3rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 @media (max-width: 720px) {
   .workGarant {
-    flex-direction: column;
-    padding: 1rem;
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 .workGarantTextBox {
@@ -1575,30 +1580,34 @@ hr {
   justify-content: center;
 }
 .workGarantTextBox-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.5rem;
+  line-height: 1.8;
   color: rgb(19, 23, 29);
+  font-weight: 500;
 }
 .workGarantTextBox-text br {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 @media (max-width: 720px) {
   .workGarantTextBox-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
+    line-height: 1.6;
   }
 }
 .workGarantImg {
+  flex: 1;
   width: 100%;
-  max-width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (max-width: 720px) {
   .workGarantImg {
-    max-width: 100%;
-    margin: 1rem 0;
+    width: 100%;
+    margin: 1.5rem 0;
+    flex: none;
+    order: 2;
   }
 }
 .workGarantImg img {
@@ -1607,10 +1616,14 @@ hr {
   border-radius: 2.5rem;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 720px) {
   .workGarantImg img {
     border-radius: 1.5rem;
+    width: 90%;
+    height: auto;
+    min-width: 280px;
   }
 }
 
@@ -1702,12 +1715,17 @@ hr {
 }
 
 .workGarantImg {
-  max-width: 60%;
+  max-width: 100%;
+}
+
+.workGarant-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .workGarant {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 4rem;
+  padding: 3rem;
 }
