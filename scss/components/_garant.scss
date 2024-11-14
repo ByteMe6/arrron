@@ -10,6 +10,7 @@
   align-items: center;
   max-width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
   
   @include mobile {
     flex-direction: column-reverse; // Changed to column-reverse to show text first
@@ -48,28 +49,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @include mobile {
-      width: 100%;
-      margin: 1.5rem 0;
-      flex: none;
-      order: 2; // Ensures image stays at bottom in mobile view
+    opacity: 0; // Start hidden
+    
+    &.aos-animate { // Custom animation when AOS triggers
+      animation: slideScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-
+    
     img {
       width: 100%;
       height: auto;
       border-radius: 2.5rem;
       object-fit: cover;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-
-      @include mobile {
-        border-radius: 1.5rem;
-        width: 90%;
-        height: auto;
-        min-width: 280px;
-      }
+      max-width: 100%;
     }
+  }
+}
+
+@keyframes slideScaleIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateX(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
