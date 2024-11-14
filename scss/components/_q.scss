@@ -25,4 +25,63 @@
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+.quoute {
+  width: 100%;
+  max-width: fit-content;
+  margin: 4rem auto;
+  position: relative;
+  padding: 0 1rem;
+
+  &-text {
+    color: rgb(19, 23, 29);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+    padding: 0 3rem;
+    width: 43.75rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      font-size: 16px;
+      padding: 0 2rem;
+      width: 100%;
+    }
+  }
+
+  &-start,
+  &-end {
+    position: absolute;
+    display: inline-block;
+
+    img {
+      width: auto;
+      height: 1.5em;
+
+      @include mobile {
+        height: 1.2em;
+      }
+    }
+  }
+
+  &-start {
+    left: 0;
+    top: 0;
+  }
+
+  &-end {
+    right: 0;
+    bottom: 0;
+    margin-top: 4.6rem;
+
+    @include mobile {
+      margin-top: 2.5rem;
+    }
+  }
 }
