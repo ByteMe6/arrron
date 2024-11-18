@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1732,4 +1733,102 @@ hr {
   flex-direction: row;
   gap: 4rem;
   padding: 3rem;
+}
+
+.subscribe {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subTextContent {
+  width: 50%;
+}
+
+.big50 {
+  color: #ff0000;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 113.01px;
+  font-weight: 700;
+  line-height: 113px;
+}
+
+.subHeading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.subComfortSpan {
+  color: rgb(226, 0, 26);
+}
+
+.subForm {
+  width: 45%;
+}
+
+.subDateTime {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.subFormInput {
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(172, 172, 172);
+  width: calc(50% - 10px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.subFormInput:focus {
+  border-color: rgb(226, 0, 26);
+  box-shadow: 0 0 5px rgba(226, 0, 26, 0.5);
+  outline: none;
+}
+
+.subFormTel {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.subFormBtn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.subFormBtn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 720px) {
+  .subscribe {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .subTextContent,
+  .subForm {
+    width: 100%;
+  }
+  .subDateTime {
+    flex-direction: column;
+  }
+  .subFormInput {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .workGarant {
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,107 @@
+$discount-color: #ff0000;
+$primary-color: rgb(226, 0, 26);
+$font-bebas: 'Bebas Neue', sans-serif;
+$font-primary: 'Arial', sans-serif;
+
+.subscribe {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; // Позволяет элементам переноситься на новую строку
+}
+
+.subTextContent {
+  width: 50%;
+}
+
+.big50 {
+  color: $discount-color;
+  font-family: $font-bebas;
+  font-size: 113.01px;
+  font-weight: 700;
+  line-height: 113px;
+}
+
+.subHeading {
+  font-family: $font-bebas;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.subComfortSpan {
+  color: $primary-color;
+}
+
+.subForm {
+  width: 45%;
+}
+
+.subDateTime {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.subFormInput {
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(172, 172, 172);
+  width: calc(50% - 10px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    outline: none;
+  }
+}
+
+.subFormTel {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.subFormBtn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background-color: $discount-color;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: darken($discount-color, 10%);
+    transform: scale(1.05);
+  }
+}
+
+@include mobile {
+  .subscribe {
+    flex-direction: column; // Располагаем элементы в столбик на мобильных
+    align-items: flex-start; // Выравниваем элементы по началу
+  }
+
+  .subTextContent,
+  .subForm {
+    width: 100%; // Полная ширина на мобильных
+  }
+
+  .subDateTime {
+    flex-direction: column; // Вертикальное расположение инпутов на мобильных
+  }
+
+  .subFormInput {
+    width: 100%; // Полная ширина для инпутов на мобильных
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .workGarant{
+    flex-direction: column;
+  }
+}
