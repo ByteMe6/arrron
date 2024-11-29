@@ -1,5 +1,7 @@
 .workGarant-img {
   border-radius: 2.5rem;
+  border: 2px solid $primary-color; // Added border with primary color
+  transition: border-color 0.3s ease; // Added transition for smooth color change
 }
 
 .workGarant {
@@ -188,4 +190,12 @@
   flex-direction: row;
   gap: 4rem;
   padding: 3rem;
+}
+.workGarantImg{
+  @include mobile{
+    display: none;
+  }
+}
+.workGarantTextBox-text{
+  text-align: left;
 }

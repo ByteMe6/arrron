@@ -20,7 +20,7 @@ body.no-scroll {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   line-height: 1.4;
 }
 
@@ -337,7 +337,7 @@ body {
   gap: 20px;
 }
 .nav-link {
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -653,6 +653,10 @@ hr {
     font-size: 0.7em;
   }
 }
+.card {
+  margin-right: 50px;
+}
+
 .pluses ul {
   margin-top: 100px;
   display: flex;
@@ -667,7 +671,7 @@ hr {
 .pluses-item p,
 .pluses-item h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
 }
 
 @media (max-width: 720px) {
@@ -851,12 +855,12 @@ hr {
 .about-title {
   font-size: 42px;
   font-weight: 700;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
 }
 .about-description {
   font-size: 18px;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   margin-bottom: 30px;
 }
 .about-btn {
@@ -898,12 +902,12 @@ hr {
 .about-features__item-content h3 {
   font-size: 18px;
   font-weight: 600;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   margin-bottom: 8px;
 }
 .about-features__item-content p {
   font-size: 16px;
-  color: rgba(19, 23, 29, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   line-height: 1.4;
 }
 @media (max-width: 720px) {
@@ -1144,7 +1148,7 @@ hr {
 
 .reviewHeading {
   text-align: center;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   font-size: 42px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 0 15px;
@@ -1555,6 +1559,8 @@ hr {
 
 .workGarant-img {
   border-radius: 2.5rem;
+  border: 2px solid rgb(226, 0, 26);
+  transition: border-color 0.3s ease;
 }
 
 .workGarant {
@@ -1584,7 +1590,7 @@ hr {
 .workGarantTextBox-text {
   font-size: 1.5rem;
   line-height: 1.8;
-  color: rgb(19, 23, 29);
+  color: rgb(0, 0, 0);
   font-weight: 500;
 }
 .workGarantTextBox-text br {
@@ -1735,71 +1741,58 @@ hr {
   padding: 3rem;
 }
 
+@media (max-width: 720px) {
+  .workGarantImg {
+    display: none;
+  }
+}
+
+.workGarantTextBox-text {
+  text-align: left;
+}
+
 .subscribe {
-  background-color: #333;
-  color: white;
-  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .subTextContent {
-  width: 50%;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  color: rgb(19, 23, 29);
 }
 
 .big50 {
-  color: #ff0000;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 113.01px;
-  font-weight: 700;
-  line-height: 113px;
-}
-
-.subHeading {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-.subComfortSpan {
-  color: rgb(226, 0, 26);
+  font-size: 60px;
+  font-weight: bold;
+  color: #ff5722;
 }
 
 .subForm {
-  width: 45%;
-}
-
-.subDateTime {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  flex: 1;
+  margin-left: 20px;
 }
 
 .subFormInput {
-  padding: 15px;
-  border-radius: 20px;
-  border: 1px solid rgb(172, 172, 172);
-  width: calc(50% - 10px);
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-.subFormInput:focus {
-  border-color: rgb(226, 0, 26);
-  box-shadow: 0 0 5px rgba(226, 0, 26, 0.5);
-  outline: none;
-}
-
-.subFormTel {
   width: 100%;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(172, 172, 172);
+  padding: 10px;
 }
 
 .subFormBtn {
   width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background-color: #ff0000;
+  background-color: rgb(226, 0, 26);
   color: white;
   border: none;
   border-radius: 20px;
@@ -1807,7 +1800,7 @@ hr {
   transition: background-color 0.3s, transform 0.2s;
 }
 .subFormBtn:hover {
-  background-color: #cc0000;
+  background-color: #af0014;
   transform: scale(1.05);
 }
 
@@ -1815,20 +1808,116 @@ hr {
   .subscribe {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
   }
-  .subTextContent,
+  .subTextContent {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   .subForm {
+    margin-left: 0;
     width: 100%;
   }
-  .subDateTime {
-    flex-direction: column;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.footerContactInfoLi {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.footerContactInfoLi img {
+  width: 5rem;
+}
+.footerContactInfoLi p {
+  font-size: 1.3rem;
+  color: rgb(19, 23, 29);
+}
+.footerContactInfoLi p span {
+  color: rgb(185, 191, 200);
+}
+
+.footer {
+  background-color: rgb(222, 222, 222);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.footerContactInfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footerContactInfo li:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.FooterTextø {
+  font-size: 1.3rem;
+  color: rgb(19, 23, 29);
+  font-weight: normal;
+}
+
+.moreInfo {
+  display: flex;
+}
+.moreInfo div {
+  margin-right: 70px;
+}
+
+@media (max-width: 720px) {
+  .footerContactInfoLi {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   }
-  .subFormInput {
+  .footerContactInfoLi img {
+    width: 2rem;
+    margin-right: 10px;
+  }
+  .footerContactInfoLi p {
+    font-size: 1.1rem;
+    color: rgb(19, 23, 29);
+  }
+  .footerContactInfoLi p span {
+    color: rgb(185, 191, 200);
+  }
+  .footer {
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto;
   }
-  .workGarant {
+  .footerContactInfo {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+  }
+  .footerContactInfo li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .FooterTextø {
+    font-size: 1.1rem;
+    color: rgb(19, 23, 29);
+    font-weight: normal;
+  }
+  .moreInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .moreInfo div {
+    margin-bottom: 20px;
   }
 }

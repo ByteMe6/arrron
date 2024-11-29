@@ -1,107 +1,83 @@
-$discount-color: #ff0000;
+$discount-color: #ff5722; // Цвет скидки
 $primary-color: rgb(226, 0, 26);
+$text-color: rgb(19, 23, 29);
 $font-bebas: 'Bebas Neue', sans-serif;
-$font-primary: 'Arial', sans-serif;
 
 .subscribe {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; // Позволяет элементам переноситься на новую строку
+  display: flex; // Используем flex для горизонтального расположения
+  flex-direction: row; // Горизонтальное выравнивание
+  align-items: center; // Центрируем элементы по вертикали
+  border-radius: 20px; // Радиус скругления для углов
+  padding: 10px; // Небольшие отступы от края для точного соответствия
+  margin-top: 20px; // Отступ сверху для разделения с другими секциями
+  overflow: hidden; // Предотвращаем появление скролла
+  box-sizing: border-box; // Учитываем границы в общей ширине
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Добавляем тень для глубины
+  border-radius: 10px; // Радиус скругления для конфетки
 }
 
 .subTextContent {
-  width: 50%;
+  flex: 1; // Позволяем тексту занимать доступное пространство
+  position: relative; // Сохраняем относительное позиционирование
+  z-index: 1; // Убедимся, что текст выше обводки
+  color: $text-color; // Цвет текста
 }
 
 .big50 {
-  color: $discount-color;
-  font-family: $font-bebas;
-  font-size: 113.01px;
-  font-weight: 700;
-  line-height: 113px;
-}
-
-.subHeading {
-  font-family: $font-bebas;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-.subComfortSpan {
-  color: $primary-color;
+  font-size: 60px; // Увеличенный размер шрифта для "50%"
+  font-weight: bold; // Жирный шрифт для акцента
+  color: $discount-color; // Цвет текста - цвет скидки
 }
 
 .subForm {
-  width: 45%;
-}
-
-.subDateTime {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  flex: 1; // Позволяем форме занимать доступное пространство
+  margin-left: 20px; // Отступ слева для разделения с текстом
 }
 
 .subFormInput {
-  padding: 15px;
-  border-radius: 20px;
-  border: 1px solid rgb(172, 172, 172);
-  width: calc(50% - 10px);
-  transition: border-color 0.3s, box-shadow 0.3s;
-
-  &:focus {
-    border-color: $primary-color;
-    box-shadow: 0 0 5px rgba($primary-color, 0.5);
-    outline: none;
-  }
-}
-
-.subFormTel {
-  width: 100%;
-  margin-top: 10px;
+  width: 100%; // Полная ширина для полей ввода
+  margin-bottom: 10px; // Отступ снизу для разделения
+  border-radius: 10px; // Радиус скругления для полей ввода
+  border: 1px solid rgb(172, 172, 172); // Обводка для полей ввода
+  padding: 10px; // Отступы для полей ввода
 }
 
 .subFormBtn {
-  width: 100%;
-  padding: 15px;
-  margin-top: 20px;
-  background-color: $discount-color;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  width: 100%; // Полная ширина для кнопки
+  background-color: $primary-color; // Цвет фона кнопки изменен на основной цвет
+  color: white; // Цвет текста
+  border: none; // Без обводки
+  border-radius: 20px; // Скругленные углы
+  cursor: pointer; // Курсор в виде указателя
+  transition: background-color 0.3s, transform 0.2s; // Эффекты перехода
 
   &:hover {
-    background-color: darken($discount-color, 10%);
-    transform: scale(1.05);
+    background-color: darken($primary-color, 10%); // Затемнение при наведении
+    transform: scale(1.05); // Эффект увеличения при наведении
   }
 }
 
-@include mobile {
+// Медиазапросы для мобильных устройств
+@media (max-width: $mobile) {
   .subscribe {
-    flex-direction: column; // Располагаем элементы в столбик на мобильных
-    align-items: flex-start; // Выравниваем элементы по началу
+    flex-direction: column; // Вертикальное выравнивание на мобильных
+    align-items: flex-start; // Выравнивание по левому краю
+    padding: 10px; // Уменьшение отступов для мобильных
   }
 
-  .subTextContent,
+  .subTextContent {
+    text-align: center; // Центрируем текст
+    margin-bottom: 20px; // Отступ снизу для разделения
+  }
+
   .subForm {
-    width: 100%; // Полная ширина на мобильных
+    margin-left: 0; // Убираем отступ слева
+    width: 100%; // Полная ширина для формы
   }
+}
 
-  .subDateTime {
-    flex-direction: column; // Вертикальное расположение инпутов на мобильных
-  }
-
-  .subFormInput {
-    width: 100%; // Полная ширина для инпутов на мобильных
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .workGarant{
-    flex-direction: column;
-  }
+// Убедитесь, что у body нет лишних отступов
+body {
+  margin: 0; // Убираем отступы у body
+  overflow-x: hidden; // Предотвращаем горизонтальный скролл
 }
