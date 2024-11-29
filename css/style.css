@@ -1828,9 +1828,20 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+.footerContactInfoLi:hover {
+  transform: translateY(-10px);
+  color: rgb(255, 255, 255);
 }
 .footerContactInfoLi img {
   width: 5rem;
+  margin-right: 10px;
+  transition: transform 0.5s ease;
+}
+.footerContactInfoLi img:hover {
+  transform: rotate(360deg);
 }
 .footerContactInfoLi p {
   font-size: 1.3rem;
@@ -1838,23 +1849,25 @@ body {
 }
 .footerContactInfoLi p span {
   color: rgb(185, 191, 200);
+  font-weight: bold;
 }
 
 .footer {
   background-color: rgb(222, 222, 222);
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   margin: 30px;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
   align-items: center;
   margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .footerContactInfo {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .footerContactInfo li:not(:last-child) {
   margin-right: 3rem;
@@ -1864,13 +1877,27 @@ body {
   font-size: 1.3rem;
   color: rgb(19, 23, 29);
   font-weight: normal;
+  text-align: center;
 }
 
 .moreInfo {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .moreInfo div {
   margin-right: 70px;
+  transition: transform 0.5s ease;
+}
+.moreInfo div:hover {
+  transform: translateY(-10px);
+}
+
+h3 {
+  color: rgb(19, 23, 29);
+}
+h3:hover {
+  color: rgb(19, 23, 29);
 }
 
 @media (max-width: 720px) {
@@ -1879,10 +1906,16 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
   }
   .footerContactInfoLi img {
     width: 2rem;
     margin-right: 10px;
+    transition: transform 0.5s ease;
+  }
+  .footerContactInfoLi img:hover {
+    transform: rotate(360deg);
   }
   .footerContactInfoLi p {
     font-size: 1.1rem;
@@ -1890,6 +1923,7 @@ body {
   }
   .footerContactInfoLi p span {
     color: rgb(185, 191, 200);
+    font-weight: bold;
   }
   .footer {
     width: 100%;
@@ -1899,11 +1933,13 @@ body {
     text-align: center;
     align-items: center;
     margin: 1rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .footerContactInfo {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
   }
   .footerContactInfo li:not(:last-child) {
     margin-bottom: 2rem;
@@ -1912,12 +1948,19 @@ body {
     font-size: 1.1rem;
     color: rgb(19, 23, 29);
     font-weight: normal;
+    text-align: center;
   }
   .moreInfo {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
   }
   .moreInfo div {
-    margin-bottom: 20px;
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+  }
+  .moreInfo div:hover {
+    transform: translateY(-10px);
   }
 }

@@ -2,30 +2,44 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center; // Added justify-content for better alignment
+  transition: transform 0.5s ease, color 0.5s ease; // Enhanced transition for animation and color
+  &:hover {
+    transform: translateY(-10px); // Enhanced hover effect for animation
+    color: rgb(255, 255, 255); // Changed color for a nice contrast on hover
+  }
   img {
     width: 5rem;
+    margin-right: 10px; // Added margin-right for spacing between icon and text
+    transition: transform 0.5s ease; // Added transition for animation
+    &:hover {
+      transform: rotate(360deg); // Added rotation animation for icon on hover
+    }
   }
   p {
     font-size: $footerTextSize;
     color: $text-color;
     span {
       color: rgb(185, 191, 200);
+      font-weight: bold; // Made secondary text bold for emphasis
     }
   }
 }
 .footer {
   background-color: rgb(222, 222, 222);
-  width: fit-content;
+  width: 100%; // Changed width for better responsiveness
   margin: 30px;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
   align-items: center;
   margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Added box-shadow for depth
 }
 .footerContactInfo {
   display: flex;
   flex-wrap: wrap; // Added flex-wrap property
+  justify-content: center; // Added justify-content for better alignment
   li:not(:last-child) {
     margin-right: 3rem;
   }
@@ -34,68 +48,99 @@
   font-size: $footerTextSize;
   color: $text-color;
   font-weight: normal;
+  text-align: center; // Added text-align for better alignment
 }
-.moreInfo{
-    display: flex;
-    div{
-        margin-right: 70px;
+.moreInfo {
+  display: flex;
+  flex-wrap: wrap; // Added flex-wrap property for more info to wrap in a row
+  justify-content: center; // Added justify-content for better alignment
+  div {
+    margin-right: 70px; // Adjusted margin for more info to be in a row with wrap
+    transition: transform 0.5s ease; // Added transition for animation
+    &:hover {
+      transform: translateY(-10px); // Enhanced hover effect for animation
     }
+  }
 }
 
-@media (max-width: $mobile) {
-    .footerContactInfoLi {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        flex-direction: row; // Changed flex-direction to row for icons to be in line with text
+h3 {
+    color: $text-color;
 
-        img {
-            width: 2rem; // Made icons smaller for mobile screens
-            margin-right: 10px; // Added margin-right for spacing between icon and text
-        }
-
-        p {
-            font-size: 1.1rem; // Adjusted font size for smaller screens
-            color: $text-color;
-
-            span {
-                color: rgb(185, 191, 200);
-            }
-        }
-    }
-
-    .footer {
-        width: 100%; // Adjusted width for smaller screens
-        margin: 20px; // Adjusted margin for smaller screens
-        border-radius: 10px; // Adjusted border-radius for smaller screens
-        padding: 15px; // Adjusted padding for smaller screens
-        text-align: center;
-        align-items: center;
-        margin: 1rem auto; // Adjusted margin for smaller screens
-    }
-
-    .footerContactInfo {
-        display: flex;
-        flex-wrap: wrap; // Added flex-wrap property
-        flex-direction: column; // Adjusted flex-direction for smaller screens
-
-        li:not(:last-child) {
-            margin-bottom: 2rem; // Adjusted margin for smaller screens
-        }
-    }
-
-    .FooterTextø {
-        font-size: 1.1rem; // Adjusted font size for smaller screens
+    &:hover {
         color: $text-color;
-        font-weight: normal;
+    }
+}
+@media (max-width: $mobile) {
+  .footerContactInfoLi {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: row; // Changed flex-direction to row for icons to be in line with text
+    justify-content: flex-start; // Changed justify-content to flex-start for better alignment
+    text-align: left; // Changed text-align to left for better alignment
+
+    img {
+      width: 2rem; // Made icons smaller for mobile screens
+      margin-right: 10px; // Added margin-right for spacing between icon and text
+      transition: transform 0.5s ease; // Added transition for animation
+      &:hover {
+        transform: rotate(360deg); // Added rotation animation for icon on hover
+      }
     }
 
-    .moreInfo {
-        display: flex;
-        flex-direction: column; // Adjusted flex-direction for smaller screens
+    p {
+      font-size: 1.1rem; // Adjusted font size for smaller screens
+      color: $text-color;
 
-        div {
-            margin-bottom: 20px; // Adjusted margin for smaller screens
-        }
+      span {
+        color: rgb(185, 191, 200);
+        font-weight: bold; // Made secondary text bold for emphasis
+      }
     }
+  }
+
+  .footer {
+    width: 100%; // Adjusted width for smaller screens
+    margin: 20px; // Adjusted margin for smaller screens
+    border-radius: 10px; // Adjusted border-radius for smaller screens
+    padding: 15px; // Adjusted padding for smaller screens
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto; // Adjusted margin for smaller screens
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Adjusted box-shadow for smaller screens
+  }
+
+  .footerContactInfo {
+    display: flex;
+    flex-wrap: wrap; // Added flex-wrap property
+    flex-direction: column; // Adjusted flex-direction for smaller screens
+    justify-content: center; // Added justify-content for better alignment
+
+    li:not(:last-child) {
+      margin-bottom: 2rem; // Adjusted margin for smaller screens
+    }
+  }
+
+  .FooterTextø {
+    font-size: 1.1rem; // Adjusted font size for smaller screens
+    color: $text-color;
+    font-weight: normal;
+    text-align: center; // Added text-align for better alignment
+  }
+
+  .moreInfo {
+    display: flex;
+    flex-wrap: wrap; // Added flex-wrap property for more info to wrap in a row on smaller screens
+    flex-direction: column; // Adjusted flex-direction for smaller screens
+    justify-content: center; // Added justify-content for better alignment
+
+    div {
+      margin-right: 20px; // Adjusted margin for smaller screens
+      transition: transform 0.5s ease; // Added transition for animation
+      &:hover {
+        transform: translateY(-10px);
+        // Enhanced hover effect for animation
+      }
+    }
+  }
 }
